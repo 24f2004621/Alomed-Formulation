@@ -1,0 +1,4856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alomed Formulations | Pharmaceutical Product Archive</title>
+
+<meta name="description" content="Alomed Formulations — corporate information, historical pharmaceutical product portfolio and public-record research archive.">
+<meta name="keywords" content="Alomed Formulations, pharmaceutical, medicines, Alomed, Hyderabad, Telangana, pharmaceutical products">
+<meta name="author" content="Alomed Formulations Research Archive">
+
+<style>
+
+:root{
+    --black:#080808;
+    --black2:#111111;
+    --white:#ffffff;
+    --offwhite:#f5f5f2;
+    --soft:#ededeb;
+    --line:#d9d9d4;
+    --muted:#6d6d68;
+    --purple:#5e0ed7;
+    --purple-dark:#4709a9;
+    --purple-light:#eee7ff;
+    --green:#177245;
+    --green-light:#e6f5ed;
+    --orange:#a35a00;
+    --orange-light:#fff1dc;
+    --red:#a51d2d;
+    --red-light:#ffe7ea;
+    --max:1440px;
+    --radius:18px;
+    --shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--offwhite);
+    color:var(--black);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+body.modal-open{
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(calc(100% - 48px),var(--max));
+    margin:auto;
+}
+
+.section{
+    padding:120px 0;
+}
+
+.section-dark{
+    background:var(--black);
+    color:var(--white);
+}
+
+.section-white{
+    background:var(--white);
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--purple);
+    margin-bottom:18px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:28px;
+    height:2px;
+    background:currentColor;
+}
+
+.section-dark .eyebrow{
+    color:#a98aff;
+}
+
+.section-title{
+    font-size:clamp(42px,6vw,86px);
+    line-height:.96;
+    letter-spacing:-.055em;
+    font-weight:800;
+    max-width:1000px;
+}
+
+.section-title span{
+    color:var(--purple);
+}
+
+.section-dark .section-title span{
+    color:#a98aff;
+}
+
+.section-intro{
+    max-width:720px;
+    margin-top:28px;
+    font-size:18px;
+    color:var(--muted);
+}
+
+.section-dark .section-intro{
+    color:#a8a8a8;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-height:48px;
+    padding:0 20px;
+    border:1px solid transparent;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--purple);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:var(--purple-dark);
+    transform:translateY(-2px);
+}
+
+.btn-dark{
+    background:var(--black);
+    color:white;
+}
+
+.btn-dark:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border-color:#bdbdb8;
+    background:transparent;
+}
+
+.btn-outline:hover{
+    border-color:var(--black);
+    background:var(--black);
+    color:white;
+}
+
+.btn-light{
+    background:white;
+    color:var(--black);
+}
+
+.btn-light:hover{
+    transform:translateY(-2px);
+}
+
+.btn svg{
+    width:16px;
+    height:16px;
+}
+
+/* STATUS BAR */
+
+.status-bar{
+    position:relative;
+    z-index:1000;
+    min-height:38px;
+    background:#181818;
+    color:#ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:8px 20px;
+    font-size:11px;
+    letter-spacing:.02em;
+}
+
+.status-bar strong{
+    color:#fff;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+    background:#f1a83b;
+    border-radius:50%;
+    margin-right:9px;
+    flex:none;
+}
+
+/* NAVIGATION */
+
+.nav{
+    position:absolute;
+    top:38px;
+    left:0;
+    right:0;
+    z-index:900;
+    color:white;
+}
+
+.nav-inner{
+    height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.7);
+    display:grid;
+    place-items:center;
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:-.05em;
+}
+
+.logo-text{
+    line-height:1;
+}
+
+.logo-name{
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:.08em;
+}
+
+.logo-sub{
+    font-size:8px;
+    color:#bbb;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.nav-links a{
+    color:#d8d8d8;
+    transition:.2s ease;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-contact{
+    padding:11px 17px;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:999px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.menu-btn{
+    display:none;
+    width:42px;
+    height:42px;
+    border:1px solid rgba(255,255,255,.4);
+    background:transparent;
+    color:white;
+    border-radius:50%;
+}
+
+.mobile-menu{
+    display:none;
+    background:#0c0c0c;
+    border-bottom:1px solid #292929;
+    padding:15px 24px 25px;
+}
+
+.mobile-menu.open{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:13px 0;
+    color:#ddd;
+    border-bottom:1px solid #292929;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    min-height:calc(100vh - 38px);
+    position:relative;
+    overflow:hidden;
+    background:#080808;
+    color:white;
+}
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.52;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 48%,rgba(0,0,0,.42) 100%),
+        linear-gradient(0deg,rgba(0,0,0,.72) 0%,transparent 50%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    min-height:calc(100vh - 38px);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding-bottom:70px;
+}
+
+.hero-label{
+    width:max-content;
+    max-width:100%;
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:999px;
+    padding:8px 13px;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:#ddd;
+    margin-bottom:22px;
+    backdrop-filter:blur(10px);
+}
+
+.hero h1{
+    font-size:clamp(62px,10vw,150px);
+    letter-spacing:-.075em;
+    line-height:.84;
+    max-width:1200px;
+    font-weight:850;
+}
+
+.hero h1 em{
+    color:#a98aff;
+    font-style:normal;
+}
+
+.hero-bottom{
+    margin-top:45px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.hero-description{
+    max-width:580px;
+    color:#d0d0d0;
+    font-size:16px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.hero-meta{
+    position:absolute;
+    right:0;
+    bottom:74px;
+    display:flex;
+    gap:30px;
+    text-align:right;
+}
+
+.hero-meta strong{
+    display:block;
+    font-size:27px;
+    line-height:1;
+}
+
+.hero-meta span{
+    display:block;
+    color:#aaa;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    margin-top:6px;
+}
+
+/* INTRO */
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:100px;
+    align-items:start;
+}
+
+.intro-big{
+    font-size:clamp(28px,4vw,57px);
+    line-height:1.08;
+    letter-spacing:-.04em;
+    font-weight:650;
+}
+
+.intro-big strong{
+    color:var(--purple);
+}
+
+.intro-side{
+    border-top:1px solid var(--line);
+    padding-top:25px;
+}
+
+.intro-side p{
+    color:var(--muted);
+    margin-bottom:24px;
+}
+
+/* FACTS */
+
+.fact-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.fact{
+    padding:30px 24px;
+    border-right:1px solid var(--line);
+}
+
+.fact:last-child{
+    border-right:0;
+}
+
+.fact-value{
+    font-size:clamp(27px,3vw,48px);
+    font-weight:850;
+    letter-spacing:-.05em;
+    line-height:1;
+}
+
+.fact-label{
+    color:var(--muted);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-top:10px;
+}
+
+/* CORPORATE */
+
+.corp-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:80px;
+}
+
+.corp-table{
+    border-top:1px solid var(--line);
+}
+
+.corp-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:20px;
+    padding:17px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.corp-key{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--muted);
+    font-weight:800;
+}
+
+.corp-value{
+    font-weight:650;
+}
+
+.corp-note{
+    color:var(--muted);
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* CAPABILITIES */
+
+.cap-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:#2b2b2b;
+    border:1px solid #2b2b2b;
+}
+
+.cap-card{
+    background:#111;
+    padding:35px;
+    min-height:260px;
+}
+
+.cap-number{
+    font-size:12px;
+    color:#a98aff;
+    font-weight:800;
+}
+
+.cap-card h3{
+    margin-top:75px;
+    font-size:24px;
+    line-height:1;
+    letter-spacing:-.04em;
+}
+
+.cap-card p{
+    color:#999;
+    font-size:13px;
+    margin-top:15px;
+}
+
+/* PRODUCTS */
+
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:30px;
+    margin-bottom:45px;
+}
+
+.products-tools{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.search-box{
+    position:relative;
+    flex:1;
+    min-width:240px;
+}
+
+.search-box svg{
+    position:absolute;
+    left:17px;
+    top:50%;
+    transform:translateY(-50%);
+    width:18px;
+    color:#888;
+}
+
+.search-box input{
+    width:100%;
+    height:48px;
+    border:1px solid var(--line);
+    background:white;
+    border-radius:999px;
+    outline:none;
+    padding:0 18px 0 48px;
+}
+
+.search-box input:focus{
+    border-color:var(--purple);
+}
+
+.filter-select{
+    height:48px;
+    border:1px solid var(--line);
+    background:white;
+    border-radius:999px;
+    padding:0 18px;
+    outline:none;
+    min-width:190px;
+}
+
+.category-row{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.category-btn{
+    border:1px solid var(--line);
+    background:white;
+    color:#555;
+    border-radius:999px;
+    padding:9px 15px;
+    font-size:11px;
+    font-weight:800;
+    transition:.2s ease;
+}
+
+.category-btn:hover,
+.category-btn.active{
+    background:var(--black);
+    color:white;
+    border-color:var(--black);
+}
+
+.product-count{
+    font-size:11px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:16px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.product-card{
+    background:white;
+    border:1px solid #e0e0db;
+    border-radius:16px;
+    overflow:hidden;
+    transition:.3s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.product-image{
+    height:220px;
+    background:#f1f1ee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    
+    transition:.4s ease;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.04);
+}
+
+.product-image.no-image{
+    background:
+        linear-gradient(135deg,#f2f2ef,#e8e8e4);
+}
+
+.no-image-label{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:#999;
+}
+
+.product-content{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.product-category{
+    color:var(--purple);
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+}
+
+.product-name{
+    font-size:22px;
+    line-height:1;
+    letter-spacing:-.035em;
+    margin-top:9px;
+}
+
+.product-generic{
+    color:#555;
+    font-size:12px;
+    margin-top:11px;
+    min-height:38px;
+}
+
+.product-tags{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+    margin-top:17px;
+}
+
+.tag{
+    display:inline-flex;
+    padding:5px 8px;
+    border-radius:999px;
+    background:#f0f0ed;
+    color:#555;
+    font-size:8px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
+
+.tag.verified{
+    background:var(--green-light);
+    color:var(--green);
+}
+
+.tag.partial{
+    background:var(--orange-light);
+    color:var(--orange);
+}
+
+.product-footer{
+    margin-top:auto;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #e7e7e2;
+}
+
+.product-form{
+    color:#777;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.details-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--black);
+    color:white;
+    border:0;
+    display:grid;
+    place-items:center;
+}
+
+.details-btn:hover{
+    background:var(--purple);
+}
+
+.load-more-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:45px;
+}
+
+/* PRODUCT MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.76);
+    backdrop-filter:blur(10px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-box{
+    width:min(1100px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:white;
+    border-radius:22px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    top:18px;
+    right:18px;
+    z-index:3;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid #ddd;
+    background:white;
+    display:grid;
+    place-items:center;
+}
+
+.modal-grid{
+    display:grid;
+    grid-template-columns:42% 58%;
+}
+
+.modal-image{
+    min-height:560px;
+    background:#f1f1ed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:45px;
+}
+
+.modal-image img{
+    width:100%;
+    height:100%;
+    max-height:500px;
+    object-fit:contain;
+}
+
+.modal-info{
+    padding:55px;
+}
+
+.modal-category{
+    color:var(--purple);
+    font-size:10px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+}
+
+.modal-title{
+    font-size:clamp(42px,5vw,70px);
+    line-height:.9;
+    letter-spacing:-.06em;
+    margin-top:15px;
+}
+
+.modal-generic{
+    font-size:18px;
+    color:#555;
+    margin-top:20px;
+}
+
+.modal-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:25px 0;
+}
+
+.detail-table{
+    border-top:1px solid var(--line);
+}
+
+.detail-row{
+    display:grid;
+    grid-template-columns:145px 1fr;
+    gap:15px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.detail-key{
+    color:#777;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.07em;
+    font-weight:800;
+}
+
+.detail-value{
+    font-size:12px;
+    font-weight:650;
+}
+
+.modal-note{
+    margin-top:22px;
+    padding:15px;
+    background:#f5f5f2;
+    color:#666;
+    font-size:11px;
+    border-radius:10px;
+}
+
+.source-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+}
+
+.source-links a{
+    font-size:10px;
+    font-weight:800;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+}
+
+/* PRODUCT GALLERY */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:60px;
+}
+
+.gallery-item{
+    background:#eee;
+    aspect-ratio:1;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transition:.4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+/* TIMELINE */
+
+.timeline{
+    margin-top:80px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:130px;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:#303030;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:50px;
+    padding-bottom:60px;
+    position:relative;
+}
+
+.timeline-year{
+    font-size:15px;
+    font-weight:900;
+    color:#aaa;
+}
+
+.timeline-content{
+    position:relative;
+}
+
+.timeline-content::before{
+    content:"";
+    width:9px;
+    height:9px;
+    background:#a98aff;
+    border-radius:50%;
+    position:absolute;
+    left:-55px;
+    top:7px;
+}
+
+.timeline-content h3{
+    font-size:29px;
+    letter-spacing:-.035em;
+}
+
+.timeline-content p{
+    max-width:700px;
+    color:#999;
+    font-size:14px;
+    margin-top:10px;
+}
+
+/* DIRECTORS */
+
+.director-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:60px;
+}
+
+.director-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:35px;
+}
+
+.director-initial{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:var(--black);
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:17px;
+    font-weight:900;
+}
+
+.director-card h3{
+    margin-top:45px;
+    font-size:30px;
+    letter-spacing:-.04em;
+}
+
+.director-role{
+    color:var(--purple);
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-top:5px;
+}
+
+.director-din{
+    margin-top:25px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    color:#666;
+    font-size:12px;
+}
+
+/* VERIFICATION */
+
+.verification-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:80px;
+    margin-top:65px;
+}
+
+.verification-list{
+    border-top:1px solid #333;
+}
+
+.verification-item{
+    display:grid;
+    grid-template-columns:170px 1fr 100px;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid #333;
+    align-items:center;
+}
+
+.verification-item .label{
+    font-weight:800;
+    font-size:12px;
+}
+
+.verification-item .description{
+    color:#999;
+    font-size:12px;
+}
+
+.verification-status{
+    text-align:right;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-weight:900;
+}
+
+.verification-status.confirmed{
+    color:#78d6a1;
+}
+
+.verification-status.partial{
+    color:#f2b66c;
+}
+
+.verification-status.unverified{
+    color:#e58b96;
+}
+
+.verification-box{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:35px;
+}
+
+.verification-box h3{
+    font-size:28px;
+    line-height:1;
+}
+
+.verification-box p{
+    color:#999;
+    font-size:13px;
+    margin-top:18px;
+}
+
+/* RESEARCH */
+
+.research-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:65px;
+}
+
+.research-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px;
+}
+
+.research-card-number{
+    font-size:10px;
+    color:var(--purple);
+    font-weight:900;
+}
+
+.research-card h3{
+    margin-top:35px;
+    font-size:26px;
+    letter-spacing:-.035em;
+}
+
+.research-card p{
+    margin-top:12px;
+    color:#666;
+    font-size:13px;
+}
+
+.research-links{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.research-links a{
+    font-size:9px;
+    border:1px solid var(--line);
+    padding:7px 10px;
+    border-radius:999px;
+    font-weight:800;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+.faq-item{
+    border-top:1px solid var(--line);
+}
+
+.faq-question{
+    width:100%;
+    padding:23px 0;
+    background:none;
+    border:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    font-size:18px;
+    font-weight:750;
+}
+
+.faq-icon{
+    width:30px;
+    height:30px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    flex:none;
+    transition:.2s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+}
+
+.faq-answer p{
+    padding:0 45px 25px 0;
+    color:#666;
+    font-size:14px;
+}
+
+.faq-item.open .faq-icon{
+    transform:rotate(45deg);
+    background:var(--black);
+    color:white;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.contact-title{
+    font-size:clamp(48px,7vw,100px);
+    line-height:.9;
+    letter-spacing:-.07em;
+}
+
+.contact-title span{
+    color:#a98aff;
+}
+
+.contact-info{
+    margin-top:45px;
+}
+
+.contact-item{
+    padding:18px 0;
+    border-top:1px solid #333;
+}
+
+.contact-label{
+    color:#888;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+}
+
+.contact-value{
+    color:white;
+    margin-top:5px;
+    font-size:15px;
+    font-weight:650;
+}
+
+.contact-card{
+    background:#141414;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:40px;
+}
+
+.contact-card h3{
+    font-size:30px;
+    letter-spacing:-.04em;
+}
+
+.contact-card p{
+    color:#999;
+    font-size:13px;
+    margin-top:12px;
+}
+
+.contact-disclaimer{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid #333;
+    color:#777;
+    font-size:10px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#050505;
+    color:white;
+    padding:60px 0 25px;
+    border-top:1px solid #222;
+}
+
+.footer-top{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:70px;
+    padding-bottom:60px;
+}
+
+.footer-brand{
+    font-size:35px;
+    font-weight:900;
+    letter-spacing:-.06em;
+}
+
+.footer-description{
+    color:#888;
+    font-size:12px;
+    max-width:430px;
+    margin-top:15px;
+}
+
+.footer-col h4{
+    color:#777;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    margin-bottom:16px;
+}
+
+.footer-col a{
+    display:block;
+    color:#ccc;
+    font-size:12px;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    border-top:1px solid #222;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#666;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.07em;
+}
+
+/* BACK TO TOP */
+
+.back-top{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid #ddd;
+    background:white;
+    color:black;
+    display:grid;
+    place-items:center;
+    z-index:700;
+    opacity:0;
+    pointer-events:none;
+    transition:.25s;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.back-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:grid;
+        place-items:center;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .fact-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .fact:nth-child(3){
+        border-right:0;
+    }
+
+    .fact:nth-child(n+4){
+        border-top:1px solid var(--line);
+    }
+
+    .cap-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .container{
+        width:min(calc(100% - 32px),var(--max));
+    }
+
+    .section{
+        padding:85px 0;
+    }
+
+    .hero-content{
+        padding-bottom:40px;
+    }
+
+    .hero h1{
+        font-size:clamp(55px,16vw,100px);
+    }
+
+    .hero-bottom{
+        display:block;
+        margin-top:30px;
+    }
+
+    .hero-meta{
+        display:none;
+    }
+
+    .intro-grid,
+    .corp-grid,
+    .verification-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .director-grid,
+    .research-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:85px;
+    }
+
+    .timeline-item{
+        grid-template-columns:85px 1fr;
+        gap:25px;
+    }
+
+    .timeline-content::before{
+        left:-30px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+    .modal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .modal-image{
+        min-height:280px;
+        max-height:350px;
+    }
+
+    .modal-info{
+        padding:30px;
+    }
+
+    .verification-item{
+        grid-template-columns:1fr;
+        gap:7px;
+    }
+
+    .verification-status{
+        text-align:left;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .status-bar{
+        font-size:9px;
+    }
+
+    .nav{
+        top:38px;
+    }
+
+    .nav-inner{
+        height:72px;
+    }
+
+    .nav-contact{
+        display:none;
+    }
+
+    .logo-name{
+        font-size:11px;
+    }
+
+    .logo-sub{
+        font-size:7px;
+    }
+
+    .hero{
+        min-height:calc(100svh - 38px);
+    }
+
+    .hero-content{
+        min-height:calc(100svh - 38px);
+    }
+
+    .hero h1{
+        font-size:18vw;
+    }
+
+    .hero-description{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        margin-top:20px;
+    }
+
+    .hero-buttons .btn{
+        flex:1;
+    }
+
+    .fact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .fact{
+        border-right:1px solid var(--line);
+    }
+
+    .fact:nth-child(2n){
+        border-right:0;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:250px;
+    }
+
+    .cap-grid{
+        grid-template-columns:1fr;
+    }
+
+    .corp-row{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+    }
+
+    .footer-brand{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        display:block;
+    }
+
+    .footer-bottom div+div{
+        margin-top:8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- STATUS -->
+<div class="status-bar">
+    <span class="status-dot"></span>
+    <span>
+        <strong>PUBLIC RECORD NOTICE:</strong>
+        Corporate status shown in public sources requires current verification. This website presents a research and historical product archive.
+    </span>
+</div>
+
+
+<!-- NAVIGATION -->
+<header class="nav">
+    <div class="container">
+        <div class="nav-inner">
+
+            <a href="#top" class="logo">
+                <div class="logo-mark">AF</div>
+                <div class="logo-text">
+                    <div class="logo-name">ALOMED FORMULATIONS</div>
+                    <div class="logo-sub">Pharmaceutical Research Archive</div>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#company">Company</a>
+                <a href="#corporate">Corporate</a>
+                <a href="#products">Products</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#research">Research</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="nav-contact" href="#contact">Public Information</a>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#company">Company</a>
+        <a href="#corporate">Corporate Information</a>
+        <a href="#products">Product Portfolio</a>
+        <a href="#timeline">Corporate Timeline</a>
+        <a href="#research">Research Sources</a>
+        <a href="#contact">Contact</a>
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="top">
+
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+        <source src="https://d1z6w7v6q14e2s.cloudfront.net/video/68d57d52c4a2b.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            Hyderabad · Telangana · India 
+        </div>
+
+        <h1>
+            ALOMED<br>
+            <em>FORMULATIONS.</em>
+        </h1>
+
+        <div class="hero-bottom">
+
+            <div class="hero-description">
+                A detailed public-information archive covering the corporate identity,
+                historical pharmaceutical product listings, directors, trademarks,
+                public sources and available product imagery associated with Alomed
+                Formulations.
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="hero-meta">
+        <div>
+            <strong>2014</strong>
+            <span>Incorporated</span>
+        </div>
+        <div>
+            <strong>60+</strong>
+            <span>Historical Listings</span>
+        </div>
+        <div>
+            <strong>01</strong>
+            <span>Directors Listed</span>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- COMPANY INTRO -->
+<section class="section section-white" id="company">
+
+    <div class="container">
+
+        <div class="intro-grid reveal">
+
+            <div>
+                <div class="eyebrow">01 / Company</div>
+
+                <div class="intro-big">
+                    A pharmaceutical identity documented across
+                    <strong>corporate records, medicine databases and historical marketplace listings.</strong>
+                </div>
+            </div>
+
+            <div class="intro-side">
+
+                <p>
+                    Alomed Formulations is a company incorporated
+                    in Hyderabad, Telangana, on 14 March 2014. Public corporate
+                    records associate the company with pharmaceutical and medicinal
+                    chemical activities under NIC classification 2423.
+                </p>
+
+                <p>
+                    The available online footprint includes corporate records,
+                    pharmaceutical databases, historical product listings,
+                    marketplace pages and trademark records. These sources do
+                    not all represent the same legal entity, so the archive
+                    distinguishes directly verified information from information
+                    requiring further confirmation.
+                </p>
+
+                <a href="#corporate" class="btn btn-dark">
+                    View Corporate Data
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACTS -->
+<section class="section-white" style="padding:0 0 100px;">
+
+    <div class="container">
+
+        <div class="fact-grid reveal">
+
+            <div class="fact">
+                <div class="fact-value">2014</div>
+                <div class="fact-label">Year Incorporated</div>
+            </div>
+
+            <div class="fact">
+                <div class="fact-value">₹1L</div>
+                <div class="fact-label">Paid-up Capital</div>
+            </div>
+
+            <div class="fact">
+                <div class="fact-value">₹1L</div>
+                <div class="fact-label">Authorized Capital</div>
+            </div>
+
+            <div class="fact">
+                <div class="fact-value">01</div>
+                <div class="fact-label">Directors Listed</div>
+            </div>
+
+            <div class="fact">
+                <div class="fact-value">60+</div>
+                <div class="fact-label">Historical Product Entries</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CORPORATE -->
+<section class="section" id="corporate">
+
+    <div class="container">
+
+        <div class="corp-grid">
+
+            <div class="reveal">
+
+                <div class="eyebrow">02 / Corporate Profile</div>
+
+                <h2 class="section-title">
+                    The <span>company</span> on paper.
+                </h2>
+
+                <p class="section-intro">
+                    Core corporate identifiers and publicly reported registration
+                    information associated with the legal entity.
+                </p>
+
+            </div>
+
+            <div class="corp-table reveal">
+
+                <div class="corp-row">
+                    <div class="corp-key">Legal Name</div>
+                    <div>
+                        <div class="corp-value">ALOMED FORMULATIONS </div>
+                    </div>
+                </div>
+
+   
+
+                <div class="corp-row">
+                    <div class="corp-key">Registration Number</div>
+                    <div>
+                        <div class="corp-value">93517</div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Incorporation</div>
+                    <div>
+                        <div class="corp-value">14 March 2014</div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Registrar</div>
+                    <div>
+                        <div class="corp-value">ROC Hyderabad</div>
+                    </div>
+                </div>
+
+             
+
+                <div class="corp-row">
+                    <div class="corp-key">Sector</div>
+                    <div>
+                        <div class="corp-value">Pharmaceuticals / Medicinal Products</div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">NIC Classification</div>
+                    <div>
+                        <div class="corp-value">2423</div>
+                        <div class="corp-note">
+                            Manufacture of pharmaceuticals, medicinal chemicals
+                            and botanical products.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Authorized Capital</div>
+                    <div>
+                        <div class="corp-value">INR 100,000</div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Paid-up Capital</div>
+                    <div>
+                        <div class="corp-value">INR 100,000</div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Registered Office</div>
+                    <div>
+                        <div class="corp-value">
+                            16-11-514/1, Dilsukhnagar,<br>
+                            Telangana 500060, India
+                        </div>
+                    </div>
+                </div>
+
+                <div class="corp-row">
+                    <div class="corp-key">Public Email</div>
+                    <div>
+                        <div class="corp-value">amoghaprofessional@gmail.com</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CAPABILITIES -->
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="eyebrow">03 / Portfolio Scope</div>
+
+            <h2 class="section-title">
+                A broad historical <span>product footprint.</span>
+            </h2>
+
+            <p class="section-intro">
+                Public listings associated with the Alomed name span multiple
+                pharmaceutical dosage forms and therapeutic categories. The
+                archive preserves the available information without treating
+                every historical listing as independently verified.
+            </p>
+
+        </div>
+
+        <div class="cap-grid reveal">
+
+            <div class="cap-card">
+                <div class="cap-number">01</div>
+                <h3>Tablets</h3>
+                <p>
+                    Historical listings include analgesic, antibiotic,
+                    gastrointestinal, neurological and nutritional products.
+                </p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-number">02</div>
+                <h3>Capsules</h3>
+                <p>
+                    Public records include acid-suppression combinations,
+                    nutritional products and other capsule formulations.
+                </p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-number">03</div>
+                <h3>Liquids</h3>
+                <p>
+                    Historical syrup and suspension listings are documented
+                    in pharmaceutical marketplaces and medicine databases.
+                </p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-number">04</div>
+                <h3>Injectables</h3>
+                <p>
+                    Certain historical listings reference injectable
+                    formulations; individual manufacturing status requires
+                    independent verification.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+
+    <div class="container">
+
+        <div class="products-header reveal">
+
+            <div>
+                <div class="eyebrow">04 / Product Archive</div>
+
+                <h2 class="section-title">
+                    Historical <span>product portfolio.</span>
+                </h2>
+
+                <p class="section-intro">
+                    Browse product names and publicly surfaced formulation
+                    information. Open any product to see its available
+                    composition, strength, dosage form, source and verification
+                    notes.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="products-tools reveal">
+
+            <div class="search-box">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
+                </svg>
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search product, composition or category..."
+                >
+
+            </div>
+
+            <select class="filter-select" id="verificationFilter">
+                <option value="all">All verification levels</option>
+                <option value="verified">Higher confidence</option>
+                <option value="partial">Partially verified</option>
+                <option value="unverified">Requires verification</option>
+            </select>
+
+        </div>
+
+        <div class="category-row reveal" id="categoryButtons"></div>
+
+        <div class="product-count" id="productCount"></div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="load-more-wrap">
+            <button class="btn btn-dark" id="loadMoreBtn">
+                Load More Products
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- TIMELINE -->
+<section class="section section-dark" id="timeline">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="eyebrow">06 / Corporate Timeline</div>
+
+            <h2 class="section-title">
+                From incorporation to the <span>public record.</span>
+            </h2>
+
+        </div>
+
+        <div class="timeline reveal">
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">2014</div>
+
+                <div class="timeline-content">
+
+                    <h3>Company incorporated</h3>
+
+                    <p>
+                        Alomed Formulations was incorporated
+                        on 14 March 2014 under the Registrar of Companies,
+                        Hyderabad. The corporate identifier is
+                        U24232TG2014PTC093517.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">2014</div>
+
+                <div class="timeline-content">
+
+                    <h3>Initial directors recorded</h3>
+
+                    <p>
+                        Sanjay Kumar Shukla is publicly associated with the company as directors,
+                        with appointment dates of 14 March 2014.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">2015–16</div>
+
+                <div class="timeline-content">
+
+                    <h3>Trademark footprint appears</h3>
+
+                    <p>
+                        Separate public trademark records show marks including
+                        BIOPREP and VARIMET associated with entities using the
+                        Alomed name. The available records use a Prayagraj /
+                        Allahabad address and therefore should not automatically
+                        be treated as records of the Hyderabad legal entity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">2019</div>
+
+                <div class="timeline-content">
+
+                    <h3>Strike-off notice published</h3>
+
+                    <p>
+                        The Ministry of Corporate Affairs published the company
+                        in a Hyderabad-related strike-off notice/list under
+                        section 248(5). This is a significant corporate-status
+                        event and should be considered when interpreting
+                        historical product listings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">Current</div>
+
+                <div class="timeline-content">
+
+                    <h3>Historical public footprint</h3>
+
+                    <p>
+                        Current public business databases consulted for this
+                        research report the entity as struck off or under
+                        process of striking off. Historical medicine and
+                        marketplace listings remain useful as an archive but
+                        do not establish current manufacturing or sales activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIRECTORS -->
+<section class="section" id="directors">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="eyebrow">07 / Management Record</div>
+
+            <h2 class="section-title">
+                Directors recorded in <span>corporate filings.</span>
+            </h2>
+
+        </div>
+
+        <div class="director-grid">
+
+
+            <div class="director-card reveal">
+
+                <div class="director-initial">SS</div>
+
+                <h3>Sanjay Kumar Shukla</h3>
+
+                <div class="director-role">
+                    Director
+                </div>
+
+                <div class="director-din">
+                    DIN · 06769311<br>
+                    Appointment · 14 March 2014
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VERIFICATION -->
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="eyebrow">08 / Verification Framework</div>
+
+            <h2 class="section-title">
+                Not every public listing means the same <span>thing.</span>
+            </h2>
+
+            <p class="section-intro">
+                A pharmaceutical product page can establish that a name was
+                publicly listed, but it does not automatically establish current
+                regulatory authorization, manufacturing ownership or availability.
+            </p>
+
+        </div>
+
+
+        <div class="verification-grid">
+
+            <div class="verification-list reveal">
+
+                <div class="verification-item">
+                    <div class="label">Corporate Identity</div>
+                    <div class="description">
+                         Incorporation date, ROC and registered-office information.
+                    </div>
+                    <div class="verification-status confirmed">Recorded</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Directors</div>
+                    <div class="description">
+                        Names and DINs associated with the company in public corporate data.
+                    </div>
+                    <div class="verification-status confirmed">Recorded</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Product Names</div>
+                    <div class="description">
+                        Brand names surfaced through medicine databases and marketplace pages.
+                    </div>
+                    <div class="verification-status confirmed">Historical</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Composition</div>
+                    <div class="description">
+                        Exact active ingredients available only for selected products.
+                    </div>
+                    <div class="verification-status partial">Partial</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Strength / Pack</div>
+                    <div class="description">
+                        Exact package information varies significantly by product source.
+                    </div>
+                    <div class="verification-status partial">Partial</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Current License</div>
+                    <div class="description">
+                        No independently verified current manufacturing license was found.
+                    </div>
+                    <div class="verification-status unverified">Not verified</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">GMP / ISO</div>
+                    <div class="description">
+                        No independently verified current certification was established.
+                    </div>
+                    <div class="verification-status unverified">Not verified</div>
+                </div>
+
+                <div class="verification-item">
+                    <div class="label">Current Sales</div>
+                    <div class="description">
+                        Historical marketplace listings do not prove present availability.
+                    </div>
+                    <div class="verification-status unverified">Not verified</div>
+                </div>
+
+            </div>
+
+
+            <div class="verification-box reveal">
+
+                <h3>
+                    Research first.<br>
+                    Claims second.
+                </h3>
+
+                <p>
+                    The website intentionally avoids presenting historical
+                    marketplace information as current regulatory or commercial
+                    fact.
+                </p>
+
+                <p>
+                    Product composition, strength, manufacturer, marketer,
+                    regulatory authorization, storage conditions and current
+                    availability should be checked against the physical package,
+                    applicable regulator and current company documentation before
+                    commercial or medical use.
+                </p>
+
+                <p>
+                    No dosage instructions or treatment recommendations are
+                    provided through this archive.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH SOURCES -->
+<section class="section" id="research">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="eyebrow">09 / Research Sources</div>
+
+            <h2 class="section-title">
+                The public <span>information trail.</span>
+            </h2>
+
+            <p class="section-intro">
+                The archive was assembled by comparing corporate databases,
+                government records, medicine databases, historical company
+                pages, marketplace listings and trademark records.
+            </p>
+
+        </div>
+
+
+        <div class="research-grid">
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 01</div>
+
+                <h3>Corporate records</h3>
+
+                <p>
+                    Corporate-information sources were used to establish the
+                    CIN, incorporation date, registered office, capital,
+                    directors and reported corporate status.
+                </p>
+
+                <div class="research-links">
+                    <a href="https://www.zaubacorp.com/ALOMED-FORMULATIONS-PRIVATE-LIMITED-U24232TG2014PTC093517" target="_blank">
+                        ZaubaCorp
+                    </a>
+
+                    <a href="https://economictimes.indiatimes.com/company/alomed-formulations-private-limited/U24232TG2014PTC093517" target="_blank">
+                        Economic Times
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 02</div>
+
+                <h3>Government records</h3>
+
+                <p>
+                    Ministry of Corporate Affairs public notices were used
+                    to identify the historical strike-off record associated
+                    with the company.
+                </p>
+
+                <div class="research-links">
+
+                    <a href="https://www.mca.gov.in/Ministry/pdf/PublicNoticeStk7HydSearchable_15032019.pdf" target="_blank">
+                        MCA Notice
+                    </a>
+
+                    <a href="https://www.mca.gov.in/Ministry/pdf/STK5ListOfCOSearchable.pdf" target="_blank">
+                        MCA List
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 03</div>
+
+                <h3>Medicine databases</h3>
+
+                <p>
+                    DrugToday records were used to identify historical product
+                    names and, where available, compositions, strengths,
+                    dosage forms and therapeutic associations.
+                </p>
+
+                <div class="research-links">
+
+                    <a href="https://www.drugtodayonline.com/companies/company_info/alomed-formulations-pvt-ltd" target="_blank">
+                        DrugToday
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 04</div>
+
+                <h3>Marketplace archives</h3>
+
+                <p>
+                    Historical TradeIndia pages provide product names,
+                    images, package information and seller-side descriptions
+                    for selected Alomed-associated products.
+                </p>
+
+                <div class="research-links">
+
+                    <a href="https://www.tradeindia.com/alomed-formulations-17352605/" target="_blank">
+                        TradeIndia
+                    </a>
+
+                    <a href="https://www.tradeindia.com/friends-pharma-1124806/" target="_blank">
+                        Friends Pharma
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 05</div>
+
+                <h3>Historical company footprint</h3>
+
+                <p>
+                    A historical company blog provides contextual information
+                    about the business and pharmaceutical supply activities.
+                    Its claims are treated as historical statements rather
+                    than independent current verification.
+                </p>
+
+                <div class="research-links">
+
+                    <a href="https://alomedformulationpvtltd.blogspot.com/" target="_blank">
+                        Historical Blog
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-card reveal">
+
+                <div class="research-card-number">SOURCE 06</div>
+
+                <h3>Trademark records</h3>
+
+                <p>
+                    Public trademark records were used to identify historical
+                    intellectual-property entries using the Alomed name.
+                    Entity identity was kept separate where addresses differed.
+                </p>
+
+                <div class="research-links">
+
+                    <a href="https://www.quickcompany.in/trademarks/3214171-bioprep" target="_blank">
+                        BIOPREP Record
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IDENTITY WARNING -->
+<section class="section section-white">
+
+    <div class="container">
+
+        <div class="intro-grid reveal">
+
+            <div>
+
+                <div class="eyebrow">10 / Entity Matching</div>
+
+                <h2 class="section-title">
+                    Same name does not always mean <span>same company.</span>
+                </h2>
+
+            </div>
+
+            <div class="intro-side">
+
+                <p>
+                    Multiple public web entities use the name “Alomed Formulations”
+                    or similar variants.
+                </p>
+
+                <p>
+                    This distinction is particularly important for company
+                    websites, regulatory research, investor research and
+                    pharmaceutical product documentation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="section" id="faq">
+
+    <div class="container">
+
+        <div class="reveal" style="text-align:center;">
+
+            <div class="eyebrow" style="justify-content:center;">
+                11 / FAQ
+            </div>
+
+            <h2 class="section-title" style="margin:auto;">
+                Frequently asked <span>questions.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="faq reveal">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Is Alomed Formulations currently operating?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Current public corporate databases consulted for the
+                        research report the entity as struck off or under
+                        process of striking off. Historical product listings
+                        should therefore not be interpreted as evidence of
+                        current operations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Did Alomed manufacture all the products listed here?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        That cannot be established from the available public
+                        material alone. Historical company material describes
+                        pharmaceutical supply activity, while marketplace and
+                        medicine databases provide product listings. A product
+                        listing does not independently establish manufacturing
+                        ownership.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Are the products shown currently available?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Current availability has not been established.
+                        Marketplace pages are preserved here as historical
+                        reference material.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Why are some product details marked partially verified?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Some sources provide only the brand name, while others
+                        expose a composition or dosage form but not the exact
+                        strength or complete package information. The website
+                        therefore does not fill missing information with guesses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Can this website be used for medical advice?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        No. This is a corporate and historical product-information
+                        archive. Product information should be confirmed against
+                        authoritative current medical and regulatory sources and
+                        the physical package before use.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Why does the website mention Prayagraj records?
+
+                    <span class="faq-icon">+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Some separate public pages and trademark records use the
+                        Alomed name with a Prayagraj / Allahabad address. Because
+                        their legal identity does not automatically match the
+                        Hyderabad CIN, they are treated as separate or
+                        potentially related records requiring confirmation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="section section-dark" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="reveal">
+
+                <div class="eyebrow">12 / Contact</div>
+
+                <h2 class="contact-title">
+                    Public<br>
+                    <span>information.</span>
+                </h2>
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            Registered Office
+                        </div>
+
+                        <div class="contact-value">
+                            16-11-514/1, Dilsukhnagar,<br>
+                            Telangana 500060, India
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            Public Email
+                        </div>
+
+                        <div class="contact-value">
+                            amoghaprofessional@gmail.com
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            Corporate Identification Number
+                        </div>
+
+                        <div class="contact-value">
+                            U24232TG2014PTC093517
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card reveal">
+
+                <h3>
+                    Information before assumption.
+                </h3>
+
+                <p>
+                    If this website is being used for due diligence,
+                    pharmaceutical research, business verification or
+                    corporate identification, independently confirm current
+                    legal status and regulatory authorization.
+                </p>
+
+                <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;">
+
+                    <a href="mailto:amoghaprofessional@gmail.com" class="btn btn-light">
+                        Email
+                    </a>
+
+                    <a href="#research" class="btn" style="border:1px solid #555;color:white;">
+                        View Sources
+                    </a>
+
+                </div>
+
+                <div class="contact-disclaimer">
+                    Product names, compositions and historical descriptions
+                    are presented for research and archival purposes. This
+                    website is not a medical advice service and does not
+                    establish current product availability, regulatory
+                    authorization or manufacturing status.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <div class="footer-brand">
+                    ALOMED.
+                </div>
+
+                <p class="footer-description">
+                    A detailed public-information and historical pharmaceutical
+                    product archive for Alomed Formulations.
+                    Built around publicly available corporate, medicine,
+                    marketplace and trademark records.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Explore</h4>
+
+                <a href="#company">Company</a>
+                <a href="#corporate">Corporate Data</a>
+                <a href="#products">Products</a>
+                <a href="#timeline">Timeline</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Information</h4>
+
+                <a href="#research">Sources</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="#top">Back to Top</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 Alomed Formulations Research Archive
+            </div>
+
+        
+
+            <div>
+                Historical information · Verify before use
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" id="modalClose" aria-label="Close">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 6l12 12M18 6L6 18"/>
+            </svg>
+
+        </button>
+
+        <div class="modal-grid">
+
+            <div class="modal-image" id="modalImage"></div>
+
+            <div class="modal-info">
+
+                <div class="modal-category" id="modalCategory"></div>
+
+                <h2 class="modal-title" id="modalTitle"></h2>
+
+                <div class="modal-generic" id="modalGeneric"></div>
+
+                <div class="modal-tags" id="modalTags"></div>
+
+                <div class="detail-table" id="modalDetails"></div>
+
+                <div class="modal-note" id="modalNote"></div>
+
+                <div class="source-links" id="modalSources"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M6 11l6-6 6 6"/>
+    </svg>
+
+</button>
+
+
+<script>
+
+/* PRODUCT DATABASE */
+
+
+
+
+const products = [
+
+{
+    name:"ACHOFF-SP",
+    category:"Pain & Inflammation",
+    generic:"Aceclofenac + Paracetamol + Serratiopeptidase",
+    composition:"Aceclofenac + Paracetamol + Serratiopeptidase",
+    strength:"Exact strengths not consistently surfaced",
+    form:"Tablet",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Historical sources associate the product with pain and inflammation-related conditions.",
+    note:"Exact strength and current availability require verification from the physical package or current regulatory source.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ACHOFF-SP_Tab..jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/achoff-sp-tablets-7372796.html"]
+    ]
+},
+
+{
+    name:"ACHOFF-P",
+    category:"Pain & Inflammation",
+    generic:"Aceclofenac + Paracetamol",
+    composition:"Aceclofenac + Paracetamol",
+    strength:"100 mg + 325 mg tablet; suspension listed as 50 mg + 125 mg per 5 ml",
+    form:"Tablet / Suspension",
+    pack:"10 x 10 tablet; 60 ml suspension",
+    route:"Oral",
+    verification:"verified",
+    status:"Historical listing",
+    indication:"Historical product information identifies this as a pain-relief combination.",
+    note:"Strength information is reproduced as surfaced in the public product record and is not a dosage recommendation.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ACHOFF-P_Tab..jpg",
+    sources:[
+        ["DrugToday","https://www.drugtodayonline.com/drug-directory/brand_info/achoff-p"]
+    ]
+},
+
+{
+    name:"NP-2",
+    category:"Pain & Inflammation",
+    generic:"Nimesulide + Paracetamol",
+    composition:"Nimesulide + Paracetamol",
+    strength:"Not consistently surfaced",
+    form:"Tablet",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Historical listing associates the product with pain, fever and inflammation-related uses.",
+    note:"This archive does not provide dosing advice.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/NP-2_2.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/np-2-tablets-7372816.html"]
+    ]
+},
+
+{
+    name:"AMFLOZ",
+    category:"Anti-infective",
+    generic:"Ofloxacin + Ornidazole",
+    composition:"Ofloxacin + Ornidazole",
+    strength:"Not independently surfaced",
+    form:"Tablet",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Historical sources associate the combination with antibacterial and antiprotozoal use.",
+    note:"Exact formulation and current authorization require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/AMFLOZ_TAB.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/ofloxacin-with-ornidazole"]
+    ]
+},
+
+{
+    name:"AMFLOZ-M",
+    category:"Anti-infective",
+    generic:"Ofloxacin / Metronidazole-type combination",
+    composition:"Combination associated with Ofloxacin and Metronidazole listings",
+    strength:"Not surfaced",
+    form:"Not independently verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"partial",
+    status:"Historical database association",
+    indication:"Antibacterial / antiprotozoal category.",
+    note:"The exact commercial formulation should be confirmed from packaging or a primary source.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/metronidazole"]
+    ]
+},
+
+{
+    name:"NUSIMED",
+    category:"Gastrointestinal",
+    generic:"Ondansetron",
+    composition:"Ondansetron",
+    strength:"Historical source associates 4 mg",
+    form:"Tablet",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Historical company material associated the product with nausea and vomiting.",
+    note:"Historical dosage descriptions are intentionally not reproduced as treatment advice.",
+    image:"",
+    sources:[
+        ["DrugToday","https://www.drugtodayonline.com/drug-directory/drug-info/ondansetron"]
+    ]
+},
+
+{
+    name:"AMTAL-BR",
+    category:"Respiratory",
+    generic:"Bromhexine + Guaiphenesin + Menthol + Terbutaline",
+    composition:"Bromhexine + Guaiphenesin + Menthol + Terbutaline Sulphate",
+    strength:"1.25 + 4 + 50 + 2.5 mg as surfaced in listing",
+    form:"Syrup",
+    pack:"100 ml",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Respiratory / cough-related product category.",
+    note:"The source wording does not establish the exact per-5-ml presentation for every component.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/AMTAL-BR_100ml_Syp.jpg",
+    sources:[
+        ["DrugToday","https://www.drugtodayonline.com/drug-directory/brand_info/amtal-br"]
+    ]
+},
+
+{
+    name:"BETIN-16",
+    category:"Neurology",
+    generic:"Betahistine",
+    composition:"Betahistine",
+    strength:"16 mg",
+    form:"Tablet",
+    pack:"10",
+    route:"Oral",
+    verification:"verified",
+    status:"Historical listing",
+    indication:"Vertigo / dizziness category.",
+    note:"Historical product data; not a treatment recommendation.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/BETIN-16.jpg",
+    sources:[
+        ["DrugToday","https://www.drugtodayonline.com/drug-directory/brand_info/betin"]
+    ]
+},
+
+{
+    name:"CFIXMED",
+    category:"Anti-infective",
+    generic:"Cefixime",
+    composition:"Cefixime",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibiotic category.",
+    note:"Exact strength and current regulatory status require verification.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/cefixime"]
+    ]
+},
+
+{
+    name:"CFIXMED DT",
+    category:"Anti-infective",
+    generic:"Cefixime",
+    composition:"Cefixime",
+    strength:"Not independently verified",
+    form:"Dispersible Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibiotic category.",
+    note:"Exact strength should be confirmed from packaging.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/CFIXMED-200_TAB..jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/cefixime"]
+    ]
+},
+
+{
+    name:"ACOD-200 DT",
+    category:"Anti-infective",
+    generic:"Cefpodoxime proxetil",
+    composition:"Cefpodoxime proxetil",
+    strength:"200 designation appears in brand name",
+    form:"Dispersible Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibiotic category.",
+    note:"The 200 designation should be verified against the physical pack before being treated as a confirmed strength.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ACOD-200.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug_info/cefpodoxime-proxetil"]
+    ]
+},
+
+{
+    name:"ALOQUIN-O",
+    category:"Anti-infective",
+    generic:"Ofloxacin + Ornidazole",
+    composition:"Ofloxacin + Ornidazole",
+    strength:"Not surfaced",
+    form:"Oral product",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibacterial / antiprotozoal category.",
+    note:"Exact strength and dosage form require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ALOQUIN-O.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/ofloxacin"]
+    ]
+},
+
+{
+    name:"ALQUIN-O",
+    category:"Anti-infective",
+    generic:"Ofloxacin-associated combination",
+    composition:"Ofloxacin association surfaced in DrugToday",
+    strength:"Not surfaced",
+    form:"Oral product",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibiotic category.",
+    note:"Exact combination should be confirmed.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ALOQUIN-O.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/ofloxacin"]
+    ]
+},
+
+{
+    name:"ALOQUIN-CEF",
+    category:"Anti-infective",
+    generic:"Cefixime + Ofloxacin",
+    composition:"Cefixime + Ofloxacin",
+    strength:"Not surfaced",
+    form:"Oral product",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibacterial category.",
+    note:"Exact formulation requires verification.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/cefixime-with-ofloxacin"]
+    ]
+},
+
+{
+    name:"ALOCV",
+    category:"Anti-infective",
+    generic:"Amoxycillin + Clavulanic Acid",
+    composition:"Amoxycillin + Clavulanic Acid",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Antibiotic category.",
+    note:"Exact component strengths require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ALOCV-625.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/amoxycillin"]
+    ]
+},
+
+{
+    name:"OSTOMED",
+    category:"Nutrition & Supplements",
+    generic:"Calcium / vitamin-mineral supplementation family",
+    composition:"Exact composition not surfaced consistently",
+    strength:"Not surfaced",
+    form:"Tablet / Capsule family",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Nutritional supplementation category.",
+    note:"Do not infer a complete formulation from the brand family alone.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/OSTOMED-CT.jpg",
+    sources:[]
+},
+
+{
+    name:"OSTOMED-M",
+    category:"Nutrition & Supplements",
+    generic:"Composition not independently surfaced",
+    composition:"Not exposed in the available marketplace listing",
+    strength:"Not surfaced",
+    form:"Capsule",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical marketplace listing",
+    indication:"Nutritional / prescription medicine listing.",
+    note:"The marketplace page establishes the product listing but does not provide enough information to safely reconstruct the complete formulation.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/OSTOMED-M.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/ostomed-m-capsules-7372850.html"]
+    ]
+},
+
+{
+    name:"NGR-DSR",
+    category:"Gastrointestinal",
+    generic:"Rabeprazole + Domperidone",
+    composition:"Rabeprazole + Domperidone",
+    strength:"Not consistently surfaced",
+    form:"Capsule",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"verified",
+    status:"Historical listing",
+    indication:"Historical listing associates the product with GERD, dyspepsia, gastritis and acid-peptic conditions.",
+    note:"Historical indications only; this page does not provide treatment advice.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/NGR-DSR.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/ngr-dsr-capsules-7372839.html"],
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/rabeprazole-with-domperidone"]
+    ]
+},
+
+{
+    name:"NGP-DSR",
+    category:"Gastrointestinal",
+    generic:"Pantoprazole-associated product",
+    composition:"Pantoprazole association surfaced",
+    strength:"Not surfaced",
+    form:"Capsule",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Acid-related gastrointestinal category.",
+    note:"Exact combination and strength require package verification.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/pantoprazole"]
+    ]
+},
+
+{
+    name:"OPERA-20",
+    category:"Gastrointestinal",
+    generic:"Omeprazole",
+    composition:"Omeprazole",
+    strength:"20 mg",
+    form:"Capsule",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"verified",
+    status:"Historical marketplace listing",
+    indication:"Acid suppression / gastrointestinal category.",
+    note:"Strength reproduced from historical product listing.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/OPERA-20.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/opera-20-capsules-7372849.html"],
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/omeprazole"]
+    ]
+},
+
+{
+    name:"PLZ-4G",
+    category:"Nutrition & Supplements",
+    generic:"Grape Seed Extract + DHA + EPA + Ginkgo Biloba + Ginseng",
+    composition:"Black Grape Seed Extract, DHA, EPA, Ginkgo Biloba, Ginseng",
+    strength:"90 mg + 60 mg + 10 mg + 42.5 mg + 10 mg + 15 mg as listed",
+    form:"Softgel",
+    pack:"10 x 1 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical listing",
+    indication:"Nutritional supplement category.",
+    note:"The component listing is reproduced from the public product database; exact label interpretation should be verified.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/PLZ-4G_7.jpg",
+    sources:[
+        ["DrugToday","https://www.drugtodayonline.com/drug-directory/brand_info/plz-4g916"]
+    ]
+},
+
+{
+    name:"MECOPENE-GOLD",
+    category:"Nutrition & Supplements",
+    generic:"Lycopene + Methylcobalamin + Multivitamins + Minerals",
+    composition:"Lycopene, Methylcobalamin, multivitamins, minerals and antioxidants",
+    strength:"Not completely surfaced",
+    form:"Softgel Capsule",
+    pack:"10 x 10",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical marketplace listing",
+    indication:"Nutritional supplement category.",
+    note:"Historical product descriptions include several nutritional claims; these should not be treated as medical advice.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/MECOPENE-GOLD_CAP.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/mecopene-gold-soft-gel-capsules-7372833.html"]
+    ]
+},
+
+{
+    name:"M-COPENE",
+    category:"Nutrition & Supplements",
+    generic:"Lycopene-associated product",
+    composition:"Exact formulation not verified",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Nutritional supplement category.",
+    note:"The name should not be assumed to represent the same formulation as MECOPENE-GOLD.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"CMD-1500",
+    category:"Vitamins",
+    generic:"Methylcobalamin-associated",
+    composition:"Methylcobalamin association",
+    strength:"1500 designation in brand name",
+    form:"Not independently verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Vitamin / nutritional category.",
+    note:"Exact formulation requires package verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/CMD-1500.jpg",
+    sources:[]
+},
+
+{
+    name:"CMD-FORTE",
+    category:"Vitamins",
+    generic:"Pyridoxine / Methylcobalamin-associated",
+    composition:"Vitamin B-family association",
+    strength:"Not surfaced",
+    form:"Not independently verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Vitamin / nutritional category.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/CMD-FORTE.jpg",
+    sources:[]
+},
+
+{
+    name:"ACHOFF-MF",
+    category:"Pain & Inflammation",
+    generic:"Mefenamic Acid + Paracetamol association",
+    composition:"Mefenamic acid + Paracetamol association",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Pain-relief category.",
+    note:"Exact formulation and strength require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ACHOFF-MF_Susp..jpg",
+    sources:[]
+},
+
+{
+    name:"ACHOFF-MR",
+    category:"Pain & Inflammation",
+    generic:"Aceclofenac-based combination",
+    composition:"Aceclofenac association",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Pain / musculoskeletal category.",
+    note:"Complete composition is not reliably surfaced.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/ACHOFF-MR_3.jpg",
+    sources:[]
+},
+
+{
+    name:"THROXMED",
+    category:"Anti-infective",
+    generic:"Azithromycin association",
+    composition:"Azithromycin association",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibiotic category.",
+    note:"Exact strength and pack require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/THROXMED.jpg",
+    sources:[]
+},
+
+{
+    name:"THROXMED-CL",
+    category:"Anti-infective",
+    generic:"Cefixime-related product",
+    composition:"Cefixime-related association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibiotic category.",
+    note:"Exact formulation requires verification.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"TRILEXER",
+    category:"Gastrointestinal",
+    generic:"Laxative-associated formulation",
+    composition:"Sodium picosulfate / milk-of-magnesia / liquid-paraffin associations surfaced",
+    strength:"Not completely surfaced",
+    form:"Suspension",
+    pack:"100 ml",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical marketplace listing",
+    indication:"Laxative / gastrointestinal category.",
+    note:"The complete formulation should be verified from the original label.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/TRILEXER_2.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/trilexer-suspension-7372868.html"]
+    ]
+},
+
+{
+    name:"FERIBET-XT",
+    category:"Haematinics",
+    generic:"Ferrous Ascorbate association",
+    composition:"Ferrous ascorbate association",
+    strength:"Not surfaced",
+    form:"Not independently verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Iron / haematinic category.",
+    note:"Exact elemental iron and complete formulation are not established.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug_info/ferrous-ascorbate"]
+    ]
+},
+
+{
+    name:"GRONET",
+    category:"Nutrition & Supplements",
+    generic:"Calcium Carbonate association",
+    composition:"Calcium carbonate association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Calcium supplementation category.",
+    note:"Exact composition requires package verification.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"IZING",
+    category:"Allergy",
+    generic:"Levocetirizine",
+    composition:"Levocetirizine",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Anti-allergic category.",
+    note:"Exact strength requires verification.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/levocetirizine"]
+    ]
+},
+
+{
+    name:"IZING-M",
+    category:"Allergy",
+    generic:"Levocetirizine / Montelukast-related",
+    composition:"Levocetirizine / Montelukast association",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Anti-allergic category.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/IZING-M.jpg",
+    sources:[]
+},
+
+{
+    name:"FLOMED-D",
+    category:"Anti-infective",
+    generic:"Ofloxacin / Dexamethasone-related",
+    composition:"Ofloxacin / Dexamethasone association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Anti-infective category.",
+    note:"Exact dosage form and composition require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/FLOMED-D.jpg",
+    sources:[]
+},
+
+{
+    name:"BLIGHT TAB",
+    category:"Pregnancy / Nutrition",
+    generic:"Pyridoxine / Doxylamine-related",
+    composition:"Pyridoxine / Doxylamine association",
+    strength:"Not surfaced",
+    form:"Tablet",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Historical database association.",
+    note:"Exact formulation requires verification. No pregnancy treatment advice is provided.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/BLIGHT_TAB..jpg",
+    sources:[]
+},
+
+{
+    name:"BLIGHT SYP",
+    category:"Respiratory",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Syrup",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established from sufficiently detailed sources.",
+    note:"Do not infer composition from the brand name.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/BLIGHT_SYP.jpg",
+    sources:[]
+},
+
+{
+    name:"BIOPREP",
+    category:"Other",
+    generic:"Composition not established",
+    composition:"Not independently verified",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Trademark / brand record",
+    indication:"Pharmaceutical / medicinal preparations category in trademark record.",
+    note:"Trademark record uses a Prayagraj / Allahabad address and should not automatically be merged with the Hyderabad legal entity.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/BIOPREP.jpg",
+    sources:[
+        ["Trademark Record","https://www.quickcompany.in/trademarks/3214171-bioprep"]
+    ]
+},
+
+{
+    name:"C-ACTION 1.5GM",
+    category:"Injectables",
+    generic:"Ceftriaxone + Sulbactam",
+    composition:"Ceftriaxone + Sulbactam",
+    strength:"1.5 g designation",
+    form:"Injection",
+    pack:"Not surfaced",
+    route:"Parenteral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Cephalosporin antibiotic + beta-lactamase inhibitor category.",
+    note:"Component split and package details require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/C-ACTION_1.5_INJ_1.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/ceftriaxone-with-sulbactum"]
+    ]
+},
+
+{
+    name:"C-ACTION-1mg",
+    category:"Injectables",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Injection-associated brand",
+    pack:"Not surfaced",
+    route:"Parenteral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Exact product information requires primary packaging or authoritative database verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/C-ACTION_1_GM_INJ.jpg",
+    sources:[]
+},
+
+{
+    name:"CEFURAID",
+    category:"Anti-infective",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Antibiotic-associated brand name.",
+    note:"Composition should not be inferred from brand naming.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/CEFURAID_TAB.jpg",
+    sources:[]
+},
+
+{
+    name:"DEFOCART",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Further primary-source verification required.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/DEFOCART.jpg",
+    sources:[]
+},
+
+{
+    name:"SANSICOFF-DM",
+    category:"Respiratory",
+    generic:"Cough / cold-associated brand",
+    composition:"Not independently verified",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"The name suggests a cough/cold category but composition is not assumed.",
+    note:"Brand naming alone is insufficient to establish formulation.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"KIDICOOL PLUS",
+    category:"Pediatric",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Pediatric-associated brand name.",
+    note:"No pediatric medical advice is provided.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/KIDICOOL-PLUS.jpg",
+    sources:[]
+},
+
+{
+    name:"LEMO-500",
+    category:"Anti-infective",
+    generic:"Levofloxacin association",
+    composition:"Levofloxacin",
+    strength:"500 designation in brand name",
+    form:"Not independently verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibiotic category.",
+    note:"Exact package strength should be confirmed.",
+    image:"",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/levofloxacin"]
+    ]
+},
+
+{
+    name:"LEMO-OZ",
+    category:"Anti-infective",
+    generic:"Levofloxacin + Ornidazole",
+    composition:"Levofloxacin + Ornidazole",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibacterial / antiprotozoal category.",
+    note:"Exact strength and formulation require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/LEMO-OZ.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/levofloxacin-with-ornidazole"]
+    ]
+},
+
+{
+    name:"LR-75",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"75 designation in brand name",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Brand name alone is insufficient to establish composition.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/LR-75.jpg",
+    sources:[]
+},
+
+{
+    name:"LIVMED",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Further verification required.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"MITHIN",
+    category:"Vitamins",
+    generic:"Methylcobalamin association",
+    composition:"Methylcobalamin association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Vitamin / nutritional category.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/MITHIN-1500.jpg",
+    sources:[]
+},
+
+{
+    name:"MOWER",
+    category:"Topical",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Topical product",
+    pack:"Not surfaced",
+    route:"Topical",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Exact formulation requires package verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/MOWER_TAB.jpg",
+    sources:[]
+},
+
+{
+    name:"MOWER GEL",
+    category:"Topical",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Gel",
+    pack:"Not surfaced",
+    route:"Topical",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/MOWER_GEL_2.jpg",
+    sources:[]
+},
+
+{
+    name:"NUTMEED-MALT",
+    category:"Nutrition & Supplements",
+    generic:"Nutritional malt-associated product",
+    composition:"Not independently verified",
+    strength:"Not surfaced",
+    form:"Malt",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Nutritional category.",
+    note:"Composition should not be inferred from the name.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"NUTMED-L",
+    category:"Nutrition & Supplements",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Nutritional category.",
+    note:"Further verification required.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/NUTMED-L_2.jpg",
+    sources:[]
+},
+
+{
+    name:"OD360",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"360 designation in brand name",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Do not infer composition from the product name.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"OOTI CREAM",
+    category:"Topical",
+    generic:"Composition not independently verified",
+    composition:"Not established from sufficient public information",
+    strength:"Not surfaced",
+    form:"Cream",
+    pack:"Not surfaced",
+    route:"Topical",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Topical pharmaceutical category.",
+    note:"Exact active ingredient requires package verification.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"OMPRIDE",
+    category:"Gastrointestinal",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Gastrointestinal-associated brand.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/OMPRIDE.jpg",
+    sources:[]
+},
+
+{
+    name:"PANPOZ-40",
+    category:"Gastrointestinal",
+    generic:"Pantoprazole",
+    composition:"Pantoprazole",
+    strength:"Not surfaced",
+    form:"Tablet / Capsule listing",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Acid suppression category.",
+    note:"Exact strength and dosage form require verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/PANPOZ-40.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/pantoprazole"]
+    ]
+},
+
+{
+    name:"PANPOZ-D",
+    category:"Gastrointestinal",
+    generic:"Pantoprazole-associated combination",
+    composition:"Pantoprazole association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Acid-related gastrointestinal category.",
+    note:"Exact combination requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/PANPOZ-D.jpg",
+    sources:[
+        ["DrugToday","https://drugtodayonline.com/drug-directory/drug-info/pantoprazole"]
+    ]
+},
+
+{
+    name:"OXAZEF",
+    category:"Anti-infective",
+    generic:"Cefixime + Ofloxacin",
+    composition:"Cefixime + Ofloxacin association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibacterial category.",
+    note:"Exact formulation requires verification.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"ALMACT-PT",
+    category:"Injectables",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Injection",
+    pack:"Not surfaced",
+    route:"Parenteral",
+    verification:"unverified",
+    status:"Historical marketplace association",
+    indication:"Not established.",
+    note:"Listed in a separate Friends Pharma profile; entity linkage requires verification.",
+    image:"",
+    sources:[
+        ["Friends Pharma","https://www.tradeindia.com/friends-pharma-1124806/"]
+    ]
+},
+
+{
+    name:"UTOMED",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Syrup",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical marketplace association",
+    indication:"Not established.",
+    note:"Listed in a separate Friends Pharma profile; entity linkage requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/UTOMED.jpg",
+    sources:[
+        ["Friends Pharma","https://www.tradeindia.com/friends-pharma-1124806/"]
+    ]
+},
+
+{
+    name:"AMO-CV 625",
+    category:"Anti-infective",
+    generic:"Amoxycillin / Clavulanate-associated",
+    composition:"Amoxycillin + Clavulanate association",
+    strength:"625 mg designation",
+    form:"Tablet",
+    pack:"10 x 6",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical marketplace listing",
+    indication:"Antibiotic category.",
+    note:"The public listing establishes the 625 mg product designation but the component split should be verified from the original label.",
+    image:"https://tiimg.tistatic.com/fp/1/007/372/amo-cv-625-tablets-805.jpg",
+    sources:[
+        ["TradeIndia","https://www.tradeindia.com/products/amo-cv-625-tablets-7372805.html"]
+    ]
+},
+
+{
+    name:"ZINMED",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Brand name alone is insufficient to determine composition.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"ZEDITRA",
+    category:"Other",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Further verification required.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"C-ACTION",
+    category:"Injectables",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Injection-associated",
+    pack:"Not surfaced",
+    route:"Parenteral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Not established.",
+    note:"Exact product information requires primary-source verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/C-ACTION_1GM.jpg",
+    sources:[]
+},
+
+{
+    name:"CEFURAID",
+    category:"Anti-infective",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Not verified",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Antibiotic-associated brand.",
+    note:"Exact formulation requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/CEFURAID_TAB.jpg",
+    sources:[]
+},
+
+{
+    name:"MECOPENE-GOLD",
+    category:"Nutrition & Supplements",
+    generic:"Likely related spelling variant of MECOPENE-GOLD",
+    composition:"Not separately verified",
+    strength:"Not separately verified",
+    form:"Softgel-associated",
+    pack:"Not separately verified",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical spelling variant",
+    indication:"Nutritional supplement category.",
+    note:"This entry is retained because it appeared separately in the historical brand list, but should not automatically be treated as a separate formulation.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"TRYTECH-FORTE",
+    category:"Vitamins",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Vitamin / nutritional-associated brand.",
+    note:"Exact formulation requires verification.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"UNCOLD",
+    category:"Respiratory",
+    generic:"Composition not verified",
+    composition:"Not independently surfaced",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"unverified",
+    status:"Historical brand entry",
+    indication:"Cold / respiratory-associated brand.",
+    note:"Do not infer active ingredients from the brand name.",
+    image:"",
+    sources:[]
+},
+
+{
+    name:"THROXMED-CL",
+    category:"Anti-infective",
+    generic:"Composition not completely verified",
+    composition:"Cefixime-related association",
+    strength:"Not surfaced",
+    form:"Not verified",
+    pack:"Not surfaced",
+    route:"Oral",
+    verification:"partial",
+    status:"Historical brand entry",
+    indication:"Antibiotic category.",
+    note:"Complete composition requires verification.",
+    image:"https://res.cloudinary.com/bvtkcr15/image/upload/THROXMED.jpg",
+    sources:[]
+}
+
+];
+
+
+
+
+
+/* DOM */
+
+const productGrid = document.getElementById("productGrid");
+const productSearch = document.getElementById("productSearch");
+const verificationFilter = document.getElementById("verificationFilter");
+const categoryButtons = document.getElementById("categoryButtons");
+const productCount = document.getElementById("productCount");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+const modal = document.getElementById("productModal");
+const modalClose = document.getElementById("modalClose");
+const modalImage = document.getElementById("modalImage");
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalGeneric = document.getElementById("modalGeneric");
+const modalTags = document.getElementById("modalTags");
+const modalDetails = document.getElementById("modalDetails");
+const modalNote = document.getElementById("modalNote");
+const modalSources = document.getElementById("modalSources");
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const backTop = document.getElementById("backTop");
+
+
+/* PRODUCT STATE */
+
+let currentCategory = "All";
+let currentVerification = "all";
+let currentSearch = "";
+let visibleProducts = 12;
+
+
+/* CATEGORIES */
+
+const categories = [
+    "All",
+    ...new Set(products.map(product => product.category))
+];
+
+categories.forEach(category => {
+
+    const button = document.createElement("button");
+
+    button.className = "category-btn" + (category === "All" ? " active" : "");
+
+    button.textContent = category;
+
+    button.addEventListener("click", () => {
+
+        currentCategory = category;
+
+        document.querySelectorAll(".category-btn").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        visibleProducts = 12;
+
+        renderProducts();
+
+    });
+
+    categoryButtons.appendChild(button);
+
+});
+
+
+/* FILTER PRODUCTS */
+
+function getFilteredProducts(){
+
+    return products.filter(product => {
+
+        const categoryMatch =
+            currentCategory === "All" ||
+            product.category === currentCategory;
+
+        const verificationMatch =
+            currentVerification === "all" ||
+            product.verification === currentVerification;
+
+        const searchableText = [
+            product.name,
+            product.category,
+            product.generic,
+            product.composition,
+            product.form,
+            product.indication
+        ].join(" ").toLowerCase();
+
+        const searchMatch =
+            searchableText.includes(currentSearch.toLowerCase());
+
+        return categoryMatch && verificationMatch && searchMatch;
+
+    });
+
+}
+
+
+/* PRODUCT CARD */
+
+function createProductCard(product,index){
+
+    const card = document.createElement("article");
+
+    card.className = "product-card reveal";
+
+    let imageHTML = "";
+
+    if(product.image){
+
+        imageHTML = `
+            <img
+                src="${product.image.replace('/image/upload/', '/image/upload/f_auto,q_auto:good,w_800/')}"
+                alt="${product.name}"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<span class=&quot;no-image-label&quot;>Image unavailable</span>'"
+            >
+        `;
+
+    }else{
+
+        imageHTML = `
+            <span class="no-image-label">
+                Historical listing
+            </span>
+        `;
+
+    }
+
+    const verificationLabel =
+        product.verification === "verified"
+        ? "Higher confidence"
+        : product.verification === "partial"
+        ? "Partial verification"
+        : "Requires verification";
+
+    card.innerHTML = `
+
+        <div class="product-image ${product.image ? "" : "no-image"}">
+            ${imageHTML}
+        </div>
+
+        <div class="product-content">
+
+            <div class="product-category">
+                ${product.category}
+            </div>
+
+            <h3 class="product-name">
+                ${product.name}
+            </h3>
+
+            <div class="product-generic">
+                ${product.generic}
+            </div>
+
+            <div class="product-tags">
+
+                <span class="tag">
+                    ${product.form}
+                </span>
+
+                <span class="tag ${product.verification === "verified" ? "verified" : product.verification === "partial" ? "partial" : ""}">
+                    ${verificationLabel}
+                </span>
+
+            </div>
+
+            <div class="product-footer">
+
+                <div class="product-form">
+                    ${product.pack}
+                </div>
+
+                <button class="details-btn" aria-label="View ${product.name} details">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+    card.querySelector(".details-btn").addEventListener("click", () => {
+        openProductModal(product);
+    });
+
+    return card;
+
+}
+
+
+/* RENDER */
+
+function renderProducts(){
+
+    const filtered = getFilteredProducts();
+
+    productGrid.innerHTML = "";
+
+    const visible = filtered.slice(0,visibleProducts);
+
+    productCount.textContent =
+        `Showing ${visible.length} of ${filtered.length} matching product entries`;
+
+    visible.forEach((product,index) => {
+
+        productGrid.appendChild(createProductCard(product,index));
+
+    });
+
+    if(visibleProducts >= filtered.length){
+        loadMoreBtn.style.display = "none";
+    }else{
+        loadMoreBtn.style.display = "inline-flex";
+    }
+
+    requestAnimationFrame(() => {
+
+        document.querySelectorAll(".product-card.reveal").forEach(card => {
+            card.classList.add("visible");
+        });
+
+    });
+
+}
+
+
+/* SEARCH */
+
+productSearch.addEventListener("input",event => {
+
+    currentSearch = event.target.value;
+
+    visibleProducts = 12;
+
+    renderProducts();
+
+});
+
+
+/* VERIFICATION FILTER */
+
+verificationFilter.addEventListener("change",event => {
+
+    currentVerification = event.target.value;
+
+    visibleProducts = 12;
+
+    renderProducts();
+
+});
+
+
+/* LOAD MORE */
+
+loadMoreBtn.addEventListener("click",() => {
+
+    visibleProducts += 12;
+
+    renderProducts();
+
+});
+
+
+/* PRODUCT MODAL */
+
+function openProductModal(product){
+
+    modalCategory.textContent = product.category;
+
+    modalTitle.textContent = product.name;
+
+    modalGeneric.textContent = product.generic;
+
+    modalTags.innerHTML = `
+        <span class="tag">${product.form}</span>
+        <span class="tag">${product.route}</span>
+        <span class="tag">${product.status}</span>
+        <span class="tag ${product.verification === "verified" ? "verified" : product.verification === "partial" ? "partial" : ""}">
+            ${
+                product.verification === "verified"
+                ? "Higher confidence"
+                : product.verification === "partial"
+                ? "Partial verification"
+                : "Requires verification"
+            }
+        </span>
+    `;
+
+    if(product.image){
+
+        modalImage.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+        `;
+
+    }else{
+
+        modalImage.innerHTML = `
+            <span class="no-image-label">
+                No public product image available
+            </span>
+        `;
+
+    }
+
+
+    const details = [
+
+        ["Generic Name",product.generic],
+        ["Composition",product.composition],
+        ["Strength",product.strength],
+        ["Dosage Form",product.form],
+        ["Pack Size",product.pack],
+        ["Route",product.route],
+        ["Category",product.category],
+        ["Historical Indication",product.indication],
+        ["Verification",product.status]
+
+    ];
+
+
+    modalDetails.innerHTML = details.map(item => `
+
+        <div class="detail-row">
+
+            <div class="detail-key">
+                ${item[0]}
+            </div>
+
+            <div class="detail-value">
+                ${item[1]}
+            </div>
+
+        </div>
+
+    `).join("");
+
+
+    modalNote.textContent = product.note;
+
+
+    modalSources.innerHTML = "";
+
+    if(product.sources && product.sources.length){
+
+        product.sources.forEach(source => {
+
+            const link = document.createElement("a");
+
+            link.href = source[1];
+
+            link.target = "_blank";
+
+            link.rel = "noopener noreferrer";
+
+            link.textContent = source[0];
+
+            modalSources.appendChild(link);
+
+        });
+
+    }else{
+
+        modalSources.innerHTML = `
+            <span style="font-size:10px;color:#888;">
+                No direct product source link was surfaced.
+            </span>
+        `;
+
+    }
+
+
+    modal.classList.add("open");
+
+    document.body.classList.add("modal-open");
+
+}
+
+
+function closeModal(){
+
+    modal.classList.remove("open");
+
+    document.body.classList.remove("modal-open");
+
+}
+
+
+modalClose.addEventListener("click",closeModal);
+
+modal.addEventListener("click",event => {
+
+    if(event.target === modal){
+        closeModal();
+    }
+
+});
+
+document.addEventListener("keydown",event => {
+
+    if(event.key === "Escape"){
+        closeModal();
+    }
+
+});
+
+
+/* MOBILE MENU */
+
+menuBtn.addEventListener("click",() => {
+
+    mobileMenu.classList.toggle("open");
+
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+    link.addEventListener("click",() => {
+        mobileMenu.classList.remove("open");
+    });
+
+});
+
+
+/* FAQ */
+
+document.querySelectorAll(".faq-question").forEach(question => {
+
+    question.addEventListener("click",() => {
+
+        const item = question.parentElement;
+
+        const answer = item.querySelector(".faq-answer");
+
+        const isOpen = item.classList.contains("open");
+
+
+        document.querySelectorAll(".faq-item").forEach(other => {
+
+            other.classList.remove("open");
+
+            other.querySelector(".faq-answer").style.maxHeight = null;
+
+        });
+
+
+        if(!isOpen){
+
+            item.classList.add("open");
+
+            answer.style.maxHeight = answer.scrollHeight + "px";
+
+        }
+
+    });
+
+});
+
+
+/* REVEAL ANIMATION */
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold:.08
+    }
+);
+
+
+document.querySelectorAll(".reveal").forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* BACK TO TOP */
+
+window.addEventListener("scroll",() => {
+
+    if(window.scrollY > 600){
+        backTop.classList.add("show");
+    }else{
+        backTop.classList.remove("show");
+    }
+
+});
+
+
+backTop.addEventListener("click",() => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+/* INITIAL PRODUCT RENDER */
+
+renderProducts();
+
+
+/* CURRENT YEAR */
+
+document.querySelector(".footer-bottom div").textContent =
+    `© ${new Date().getFullYear()} Alomed Formulations Research Archive`;
+
+
+/* HERO VIDEO FALLBACK */
+
+const heroVideo = document.querySelector(".hero-video");
+
+heroVideo.addEventListener("error",() => {
+
+    heroVideo.style.display = "none";
+
+});
+
+
+</script>
+
+</body>
+</html>
